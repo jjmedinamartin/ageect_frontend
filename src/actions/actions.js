@@ -1,0 +1,1 @@
+export const loadProjectsAction = value => ({type: 'loadProjects', value});

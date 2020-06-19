@@ -1,18 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
-class LandingPage extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        );
-    }
-}
-
-LandingPage.propTypes = {
-
+const LandingPageComponent=(props) => {
+    const { projects } = props;
+        return (<div>{ projects }</div>)
 };
 
-export default LandingPage;
+export default LandingPageComponent;
