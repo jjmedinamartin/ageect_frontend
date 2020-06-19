@@ -1,8 +1,12 @@
-import React from 'react';
+import React  from 'react';
+import PropTypes from 'prop-types';
 
-const LandingPageComponent=(props) => {
+
+export const LandingPageComponent = (props) => {
     const { projects } = props;
-        return (<div>{ projects }</div>)
+        return (<div>{ projects.map(x => x.cosa) }</div>)
 };
 
-export default LandingPageComponent;
+LandingPageComponent.propTypes={
+    projects: PropTypes.array.isRequired,
+}
