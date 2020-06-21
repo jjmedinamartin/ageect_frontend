@@ -2,7 +2,7 @@ import { createStore } from 'redux';
 import { reducer } from '../reducers/reducer';
 
 const initialState = {
-    projects: [],
+    projects: null,
 };
 
 
