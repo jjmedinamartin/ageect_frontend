@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export const LandingPageComponent = (props) => {
     const { projects } = props;
-        return (<div>{ projects.map(x => x.cosa) }</div>)
+        return (<div>{ projects.length }</div>)
 };
 
 LandingPageComponent.propTypes={

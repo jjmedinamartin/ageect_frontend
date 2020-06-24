@@ -1,1 +1,3 @@
-export const loadProjectsAction = value => ({type: 'loadProjects', value});
+export const LOAD_PROJECTS = 'loadProjects';
+
+export const loadProjectsAction = payload => ({type: LOAD_PROJECTS, payload});
