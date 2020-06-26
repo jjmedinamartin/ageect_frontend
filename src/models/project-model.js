@@ -1,11 +1,13 @@
 export class Project {
-    parseApiToModel(apiData) {
-        this.system_id = apiData.system_id;
-        this.name = apiData.name;
-        this.description = apiData.description;
-        this.complexity = apiData.complexity;
-        this.status = apiData.status;
-        this.createdAt = apiData.createdAt;
-        this.updatedAt = apiData.updatedAt;
+    static parseApiToModel(apiData) {
+        const project = new Project();
+        project.system_id = apiData.system_id;
+        project.name = apiData.name;
+        project.description = apiData.description;
+        project.complexity = apiData.complexity;
+        project.status = apiData.status;
+        project.createdAt = apiData.createdAt;
+        project.updatedAt = apiData.updatedAt;
+        return project;
     }
 }

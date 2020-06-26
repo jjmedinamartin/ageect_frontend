@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { LandingPageComponent } from '../../components/landing-page/landing-page.component';
 import { loadProjectsAction } from '../../actions/actions';
 import { fetchAllProjects } from '../../services/project-service/project.api-service';
-import { Project } from './../../models/project-model';
 
 class LandingPageContainer extends Component {
     render() {
@@ -15,20 +14,9 @@ class LandingPageContainer extends Component {
 
     componentDidMount() {
         fetchAllProjects()
-        .then(api_projects => {
-            this.parseAllProjects(api_projects);
+        .then(projects => {
+            this.props.handleLoadProjects(projects);
         })
-
-    }
-
-    parseAllProjects = api_projects => {
-        const projects = [];
-        api_projects.data.forEach(project_it => {
-            const project = new Project();
-            project.parseApiToModel(project_it);
-            projects.push(project);
-        });
-        this.props.handleLoadProjects(projects);
     }
 }
 
