@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { LandingPageComponent } from "../../components/landing-page/landing-page.component";
 import { loadProjectsAction } from "../../actions/actions";
-import { fetchAllProjects } from "../../services/project-service/project.api-service";
+import { ProjectService } from '../../services/project-service/project.service';
 
 class LandingPageContainer extends Component {
   render() {
@@ -15,7 +15,7 @@ class LandingPageContainer extends Component {
   }
 
   componentDidMount() {
-    fetchAllProjects().then((projects) => {
+    ProjectService.fetchAllProjects().then((projects) => {
       this.props.handleLoadProjects(projects);
     });
   }
