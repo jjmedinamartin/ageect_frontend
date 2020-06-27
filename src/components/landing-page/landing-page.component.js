@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const LandingPageComponent = (props) => {
   const { projects } = props;
-  return <div>{projects.length}</div>;
+return <div>{projects.length} CONTEXT {process.env.REACT_APP_CONTEXT}</div>;
 };
 
 LandingPageComponent.propTypes = {
