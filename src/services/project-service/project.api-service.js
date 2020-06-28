@@ -1,8 +1,7 @@
-import {
-  getServiceString,
-  ALL_PROJECTS_ENDPOINT,
-} from "../../settings/service-settings";
+
 import { Project } from "./../../models/project-model";
+import { ALL_PROJECTS_ENDPOINT } from "../service-endpoints";
+import { getServiceString } from "../service-utils";
 
 export class ProjectApiService {
   static fetchAllProjects = () => {
