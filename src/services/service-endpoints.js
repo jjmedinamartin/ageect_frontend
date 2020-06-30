@@ -1,1 +1,1 @@
-export const ALL_PROJECTS_ENDPOINT = "/projects";
+export const PROJECTS_BY_USER_ENDPOINT = "/projectsByUser";

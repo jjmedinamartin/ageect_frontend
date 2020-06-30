@@ -1,12 +1,13 @@
 
 import { Project } from "./../../models/project-model";
-import { ALL_PROJECTS_ENDPOINT } from "../service-endpoints";
+import { PROJECTS_BY_USER_ENDPOINT } from "../service-endpoints";
 import { getServiceString } from "../service-utils";
+import { TEMP_USER } from "../../settings/constants";
 
 export class ProjectApiService {
-  static fetchAllProjects = () => {
+  static fetchProjectsByUser = () => {
     return Promise.resolve(
-      fetch(getServiceString(ALL_PROJECTS_ENDPOINT))
+      fetch(getServiceString(PROJECTS_BY_USER_ENDPOINT, TEMP_USER))
         .then((response) => response.json())
         .then((api_projects) => {
           return api_projects.data.map(function (project_it) {
