@@ -8,9 +8,7 @@ import { ProjectService } from "../../services/project-service/project.service";
 class LandingPageContainer extends Component {
   render() {
     return (
-      this.props.projects && (
         <LandingPageComponent projects={this.props.projects} />
-      )
     );
   }
 
