@@ -8,11 +8,13 @@ export const LandingPageComponent = (props) => {
   const { projects } = props;
   return (
     <div>
-      {projects ? <div className="mainLayout"><ProjectCardComponent project={projects[0]}></ProjectCardComponent></div> : <div className="loadingLayout"><LinearProgress /></div>}
+      {projects
+        ? <div className="mainLayout"><div className="cardsSection">{projects.map(project => <ProjectCardComponent key={project.system_id} project={project}></ProjectCardComponent>)}</div></div>
+        : <div className="loadingLayout"><LinearProgress /></div>}
     </div>
   );
 };
 
 LandingPageComponent.propTypes = {
-  projects: PropTypes.array.isRequired,
+  projects: PropTypes.array,
 };

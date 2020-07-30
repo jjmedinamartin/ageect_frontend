@@ -24,11 +24,11 @@ LandingPageContainer.propTypes = {
 };
 
 const mapStateToProps = ({ projects }) => ({ projects });
-const mapDisPatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch) => ({
   handleLoadProjects: (value) => dispatch(loadProjectsAction(value)),
 });
 
 export default connect(
   mapStateToProps,
-  mapDisPatchToProps
+  mapDispatchToProps
 )(LandingPageContainer);

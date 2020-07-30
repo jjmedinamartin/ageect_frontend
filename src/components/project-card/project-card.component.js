@@ -13,12 +13,22 @@ export const ProjectCardComponent = (props) => {
         </div>
       </div>
       <div className="cardBody">
-        <div className="ellipsis">
-          {project.description}
-        </div>
         <div className="status">
           <Brightness1Icon className={getStatusIconStyle(project.status)}></Brightness1Icon>
           <div className="statusText">{project.status}</div>
+        </div>
+        <div className="ellipsis">
+          {project.description}
+        </div>
+      </div>
+      <div className="cardFooter">
+        <div className="footerElement">
+          <div className="footerElementTitle">Priority</div>
+          <div className={getPriorityStyle(project.priority)}>{project.priority}</div>
+        </div>
+        <div className="footerElement">
+          <div className="footerElementTitle">Complexity</div>
+          <div className={getComplexityStyle(project.complexity)}>{project.complexity}</div>
         </div>
       </div>
     </div>
@@ -40,5 +50,13 @@ ProjectCardComponent.propTypes = {
 
 const getStatusIconStyle = (status) => {
   return `statusIcon ${status === 'active' ? 'active' : 'inactive'}`;
+}
+
+const getComplexityStyle = (complexity) => {
+  return `footerElementValue ${complexity}`;
+}
+
+const getPriorityStyle = (complexity) => {
+  return `footerElementValue ${complexity}`;
 }
 

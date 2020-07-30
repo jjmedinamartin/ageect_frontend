@@ -7,7 +7,7 @@
       "owner": "5e80c62b8aabc398c2ad4464",
       "description": "Application to control the flow of water to irrigate the small autonomous garden",
       "complexity": "high",
-      "priority": "low",
+      "priority": "max",
       "status": "active",
       "createdAt": "2019-03-29T16:30:20.201Z",
       "updatedAt": "2019-03-29T16:30:20.201Z"

@@ -1,15 +1,32 @@
 @import "./../../style/style.scss";
 @import "./../../colors.scss";
 
-.mainLayout {
-  min-height: 100vh;
-  height: max-content;
-  background-color: #E5E9EF;
-  padding: 24px;
-  display: flex;
-  max-width: 100%;
-  flex-wrap: wrap;
-}
+
+  .mainLayout {
+    min-height: 100vh;
+    height: max-content;
+    background-color: #E5E9EF;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+
+    .cardsSection {
+      display: flex;
+      max-width: 100%;
+      flex-wrap: wrap;
+      width: 300px;
+      @media (min-width: 600px) {
+        width: 548px;
+      }
+      @media (min-width: 1024px) {
+        width: 822px;
+      }
+      @media (min-width: 1200px) {
+        width: 1096px;
+      }
+    }
+  }
+
 
 .loadingLayout {
   background-color: #E5E9EF;
