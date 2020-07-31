@@ -8,7 +8,8 @@
       "description": "Application to control the flow of water to irrigate the small autonomous garden",
       "complexity": "high",
       "priority": "max",
-      "status": "active",
+      "status": "planning",
+      "active": true,
       "createdAt": "2019-03-29T16:30:20.201Z",
       "updatedAt": "2019-03-29T16:30:20.201Z"
     },
@@ -20,7 +21,8 @@
       "description": "application to control the different terminals of a domestic environment",
       "complexity": "medium",
       "priority": "high",
-      "status": "active",
+      "status": "ready_to_start",
+      "active": true,
       "createdAt": "2019-04-04T13:21:20.201Z",
       "updatedAt": "2019-04-04T13:21:20.201Z"
     },
@@ -32,7 +34,8 @@
       "description": "system to alert of the presence of infectious agents",
       "complexity": "low",
       "priority": "low",
-      "status": "active",
+      "status": "paused",
+      "active": true,
       "createdAt": "2019-04-04T13:24:20.201Z",
       "updatedAt": "2019-04-04T13:21:24.201Z"
     },
@@ -44,7 +47,8 @@
       "description": "System to report the status of the acid level of the water",
       "complexity": "high",
       "priority": "max",
-      "status": "active",
+      "status": "cancelled",
+      "active": true,
       "createdAt": "2019-04-04T13:25:20.201Z",
       "updatedAt": "2019-04-04T13:21:25.201Z"
     },
@@ -56,7 +60,8 @@
       "description": "Automatic calculation of agricultural constants",
       "complexity": "high",
       "priority": "min",
-      "status": "active",
+      "status": "stopped",
+      "active": true,
       "createdAt": "2019-04-04T13:27:20.201Z",
       "updatedAt": "2019-04-04T13:21:27.201Z"
     },
@@ -68,7 +73,8 @@
       "description": "Estimator of foreseeable changes in weather",
       "complexity": "min",
       "priority": "low",
-      "status": "active",
+      "status": "completed",
+      "active": true,
       "createdAt": "2019-04-04T13:28:20.201Z",
       "updatedAt": "2019-04-04T13:28:27.201Z"
     },
@@ -80,7 +86,8 @@
       "description": "API for the consultation of aquifer statistics",
       "complexity": "medium",
       "priority": "high",
-      "status": "active",
+      "status": "completed",
+      "active": false,
       "createdAt": "2019-04-04T13:30:20.201Z",
       "updatedAt": "2019-04-04T13:30:27.201Z"
     },
@@ -92,7 +99,8 @@
       "description": "Search for databases related to a topic",
       "complexity": "low",
       "priority": "high",
-      "status": "inactive",
+      "status": "commited",
+      "active": true,
       "createdAt": "2019-04-04T13:32:20.201Z",
       "updatedAt": "2019-04-04T13:32:27.201Z"
     },
@@ -104,7 +112,8 @@
       "description": "Inserting data into concurrent databases",
       "complexity": "high",
       "priority": "high",
-      "status": "inactive",
+      "status": "ready_to_start",
+      "active": false,
       "createdAt": "2019-04-04T13:34:20.201Z",
       "updatedAt": "2019-04-04T13:34:27.201Z"
     },
@@ -116,7 +125,8 @@
       "description": "Central application for the use of management tools",
       "complexity": "medium",
       "priority": "max",
-      "status": "active",
+      "status": "commited",
+      "active": true,
       "createdAt": "2019-04-04T13:36:20.201Z",
       "updatedAt": "2019-04-04T13:36:27.201Z"
     }

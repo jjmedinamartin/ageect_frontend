@@ -15,6 +15,10 @@
       max-width: 100%;
       flex-wrap: wrap;
       width: 300px;
+      align-content: flex-start;
+      @media (max-width: 599px) {
+        justify-content: center;
+      }
       @media (min-width: 600px) {
         width: 548px;
       }
@@ -23,6 +27,9 @@
       }
       @media (min-width: 1200px) {
         width: 1096px;
+      }
+      @media (min-width: 1550px) {
+        width: 1370px;
       }
     }
   }

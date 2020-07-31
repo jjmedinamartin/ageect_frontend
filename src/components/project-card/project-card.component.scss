@@ -34,17 +34,6 @@
         flex-direction: column;
         flex: 1 1 auto;
 
-        .ellipsis {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-            font-weight: 200;
-            margin-bottom: 24px;
-            word-break: break-word;
-        }
-
         .status {
             display: flex;
             justify-content: center;
@@ -55,18 +44,28 @@
                 font-size: 12px;
                 margin-right: 4px;
 
-                &.active{
+                &.planning, &.commited{
+                    color: blue;
+                }
+                &.ready_to_start, &.in_progress, &.completed{
                     color: green;
                 }
-                &.inactive{
+                &.paused, &.stopped, &.cancelled{
                     color: red;
                 }
             }
+        }
 
-            .statusText {
-                text-transform: capitalize;
-            }
-     }
+        .ellipsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            font-weight: 200;
+            margin-bottom: 24px;
+            word-break: break-word;
+        }
     }
 
     .cardFooter {
@@ -115,4 +114,36 @@
             }
         }
     }
+    &.disabled {
+        opacity: 0.4;
+        .cardHeader {
+            background-color: #a1a4aa;
+        }
+        .cardBody {
+            background-color: #d8dbe0;
+            .status {
+                text-decoration: line-through;
+                .statusIcon {
+                    color: black;
+                }
+            }
+        }
+        .cardFooter {
+            background-color: #a1a4aa;
+            .footerElement {
+            .footerElementValue {
+                text-decoration: line-through;
+                color: black;
+            }
+        }
+
+        }
+        color:black;
+    }
+}
+
+.cardContainer:hover:not(.disabled) {
+    box-shadow: 3px 3px 7px -2px #6f6aa8;
+    transition: box-shadow 0.25s;
+    cursor: pointer;
 }

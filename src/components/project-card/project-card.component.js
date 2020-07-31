@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import './project-card.component.scss';
 import Brightness1Icon from '@material-ui/icons/Brightness1'
+import { getRepresentationalStatus } from "../../models/project-model";
 
 export const ProjectCardComponent = (props) => {
   const { project } = props;
   return (
-    <div className="cardContainer">
+    <div className={getActiveInactiveStyle(project.active)}>
       <div className="cardHeader">
         <div className="ellipsis">
           {project.name}
@@ -15,7 +16,7 @@ export const ProjectCardComponent = (props) => {
       <div className="cardBody">
         <div className="status">
           <Brightness1Icon className={getStatusIconStyle(project.status)}></Brightness1Icon>
-          <div className="statusText">{project.status}</div>
+          <div className="statusText">{getRepresentationalStatus(project.status)}</div>
         </div>
         <div className="ellipsis">
           {project.description}
@@ -49,7 +50,7 @@ ProjectCardComponent.propTypes = {
 };
 
 const getStatusIconStyle = (status) => {
-  return `statusIcon ${status === 'active' ? 'active' : 'inactive'}`;
+  return `statusIcon ${status}`;
 }
 
 const getComplexityStyle = (complexity) => {
@@ -58,5 +59,9 @@ const getComplexityStyle = (complexity) => {
 
 const getPriorityStyle = (complexity) => {
   return `footerElementValue ${complexity}`;
+}
+
+const getActiveInactiveStyle = (active) => {
+  return `cardContainer ${!active && 'disabled'}`;
 }
 
